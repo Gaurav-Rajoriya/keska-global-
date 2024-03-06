@@ -1,0 +1,63 @@
+.responsive{
+    display: none;
+}
+
+
+
+.responsive ion-icon{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ ion-icon[name="close-circle-sharp"] {
+    display: none;
+}
+
+.show{
+    position: absolute;
+    left:0 !important;
+}
+
+
+@media screen and (max-width:767px) {
+    .social-icon{
+        display: none;
+    }
+
+    .responsive{
+        display:block;
+    }
+
+    .nav-links{
+        position: absolute;
+        z-index: 99;
+        flex-direction: column;
+        background-color:black;
+        background: url(https://img.freepik.com/free-vector/dark-low-poly-background_1048-7971.jpg?t=st=1709205454~exp=1709209054~hmac=b6a32bf03b7b49f61530e89a0ec11e0f58b99a75105cdc5066c173ab5b9617ae&w=740);
+        left:-100%;
+        top:17%;
+        padding: 1rem;
+        width: 100%;
+        transition:ease-in-out 1s;
+    }
+}
+
+.nav-links li a{
+    font-variant: small-caps;
+    position: relative;
+}
+
+.nav-links li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: #66CC33;
+    left: 0%;
+    bottom: 0%;
+    transition: all 0.5s linear;
+}
+
+.nav-links li a:hover::after{
+    width: 100%;
+}
